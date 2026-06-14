@@ -9,22 +9,22 @@ const PricingBox = (props: {
 
   return (
     <div className="w-full">
-      <div className="shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark relative z-10 rounded-xs bg-white px-8 py-10">
+      <div className="relative z-10 rounded-2xl border border-[#E8D7C0] bg-white px-8 py-10 shadow-[0_10px_40px_rgba(196,142,59,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(196,142,59,0.15)]">
         <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
-            <span className="time text-body-color text-lg font-medium">
+          <h3 className="price mb-2 text-[32px] font-bold text-[#2E2A25]">
+            <span className="amount">{price}</span>
+            <span className="time text-lg font-medium text-[#6B6258]">
               /{duration}
             </span>
           </h3>
-          <h4 className="text-dark mb-2 text-xl font-bold dark:text-white">
+          <h4 className="mb-2 text-xl font-bold text-[#2E2A25]">
             {packageName}
           </h4>
         </div>
-        <p className="text-body-color mb-7 text-base">{subtitle}</p>
-        <div className="border-body-color/10 mb-8 border-b pb-8 dark:border-white/10">
-          <button className="bg-primary/80 hover:shadow-signUp flex w-full items-center justify-center rounded-xs p-3 text-base font-semibold text-white transition duration-300 ease-in-out">
-            Start Free Trial
+        <p className="mb-7 text-base text-[#6B6258]">{subtitle}</p>
+        <div className="mb-8 border-b border-[#E2BC81]/[.2] pb-8">
+          <button className="flex w-full items-center justify-center rounded-lg bg-[#C48E3B] p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-[#A8742D]">
+            Konsultasi Sekarang
           </button>
         </div>
         <div>{children}</div>
@@ -55,8 +55,8 @@ const PricingBox = (props: {
                 y2="83.2919"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#C48E3B" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#C48E3B" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_70:153"
@@ -66,8 +66,8 @@ const PricingBox = (props: {
                 y2="103.645"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#C48E3B" stopOpacity="0.62" />
+                <stop offset="1" stopColor="#C48E3B" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>

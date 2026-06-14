@@ -2,80 +2,75 @@ import NewsLatterBox from "./NewsLatterBox";
 
 const Contact = () => {
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="bg-[#FCFBF9] py-16 lg:py-20">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div
-              className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
-              data-wow-delay=".15s
-              "
-            >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                Need Help? Open a Ticket
+        <div className="mx-auto max-w-5xl">
+          <div className="rounded-3xl border border-[#E8DDD0] bg-white px-8 py-14 shadow-sm lg:px-16">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="mb-4 inline-block text-sm font-medium tracking-[0.2em] text-[#C48E3B] uppercase">
+                Srikandi Wedding Organizer
+              </span>
+
+              <h2 className="mb-6 text-3xl font-bold text-[#2E2A25] md:text-5xl">
+                Jadwalkan Konsultasi Gratis
               </h2>
-              <p className="mb-12 text-base font-medium text-body-color">
-                Our support team will get back to you ASAP via email.
+
+              <p className="mb-10 text-lg leading-relaxed text-[#6B6258]">
+                Ceritakan konsep pernikahan impian Anda kepada tim kami. Kami
+                siap membantu mulai dari perencanaan, dekorasi, koordinasi
+                vendor hingga hari pelaksanaan agar acara berjalan lancar dan
+                berkesan.
               </p>
-              <form>
-                <div className="-mx-4 flex flex-wrap">
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="name"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Enter your name"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="email"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Email
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="message"
-                        className="mb-3 block text-sm font-medium text-dark dark:text-white"
-                      >
-                        Your Message
-                      </label>
-                      <textarea
-                        name="message"
-                        rows={5}
-                        placeholder="Enter your Message"
-                        className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="w-full px-4">
-                    <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      Submit Ticket
-                    </button>
-                  </div>
-                </div>
-              </form>
+
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <a
+                  href="https://wa.me/628123456789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl bg-[#C48E3B] px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#B17C2C]"
+                >
+                  Konsultasi via WhatsApp
+                </a>
+
+                <a
+                  href="#packages"
+                  className="rounded-xl border border-[#C48E3B] px-8 py-4 font-semibold text-[#C48E3B] transition-all duration-300 hover:bg-[#F8F1E7]"
+                >
+                  Lihat Paket Wedding
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
+
+            <div className="mt-12 border-t border-[#EFE8DD] pt-8">
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="text-center">
+                  <h4 className="mb-2 font-semibold text-[#2E2A25]">
+                    Respon Cepat
+                  </h4>
+                  <p className="text-sm text-[#6B6258]">
+                    Konsultasi langsung dengan tim kami.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="mb-2 font-semibold text-[#2E2A25]">
+                    Konsultasi Gratis
+                  </h4>
+                  <p className="text-sm text-[#6B6258]">
+                    Tanpa biaya dan tanpa komitmen.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <h4 className="mb-2 font-semibold text-[#2E2A25]">
+                    Layanan Lengkap
+                  </h4>
+                  <p className="text-sm text-[#6B6258]">
+                    Dari akad hingga resepsi.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

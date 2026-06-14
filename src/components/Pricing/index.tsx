@@ -8,94 +8,65 @@ const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section
+      id="packages"
+      className="relative z-10 bg-[#FCFBF9] py-16 md:py-20 lg:py-28"
+    >
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Paket Wedding Organizer"
+          paragraph="Setiap pasangan memiliki cerita yang berbeda. Pilih paket layanan yang sesuai dengan kebutuhan acara Anda atau konsultasikan untuk paket yang sepenuhnya disesuaikan."
           center
           width="665px"
         />
 
         <div className="w-full">
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
-            <span
-              onClick={() => setIsMonthly(true)}
-              className={`${
-                isMonthly
-                  ? "pointer-events-none text-primary"
-                  : "text-dark dark:text-white"
-              } mr-4 cursor-pointer text-base font-semibold`}
-            >
-              Monthly
-            </span>
-            <div
-              onClick={() => setIsMonthly(!isMonthly)}
-              className="flex cursor-pointer items-center"
-            >
-              <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
-                <div
-                  className={`${
-                    isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
-                >
-                  <span className="active h-4 w-4 rounded-full bg-white"></span>
-                </div>
-              </div>
-            </div>
-            <span
-              onClick={() => setIsMonthly(false)}
-              className={`${
-                isMonthly
-                  ? "text-dark dark:text-white"
-                  : "pointer-events-none text-primary"
-              } ml-4 cursor-pointer text-base font-semibold`}
-            >
-              Yearly
+            <span className="mr-4 text-base font-semibold text-[#C48E3B]">
+              Investasi Pernikahan
             </span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Akad Intimate"
+            price="5.000.000"
+            duration="-"
+            subtitle="Cocok untuk akad atau resepsi sederhana dengan pendampingan profesional."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Konsultasi Persiapan Pernikahan" status="active" />
+            <OfferList text="Rundown Acara" status="active" />
+            <OfferList text="Koordinasi Vendor" status="active" />
+            <OfferList text="Tim WO Hari H" status="active" />
+            <OfferList text="Pendampingan Pengantin" status="active" />
+            <OfferList text="Full Planning" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Wedding Signature"
+            price="15.000.000"
+            duration="-"
+            subtitle="Pilihan favorit pasangan dengan layanan lengkap dari persiapan hingga hari pernikahan."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Full Wedding Planning" status="active" />
+            <OfferList text="Koordinasi Seluruh Vendor" status="active" />
+            <OfferList text="Tim WO Profesional" status="active" />
+            <OfferList text="Pendampingan Keluarga" status="active" />
+            <OfferList text="Technical Meeting" status="active" />
+            <OfferList text="Gladi Bersih Acara" status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Royal Wedding"
+            price="30.000.000"
+            duration="-"
+            subtitle="Layanan premium dengan konsep eksklusif dan pendampingan penuh."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Wedding Planning Premium" status="active" />
+            <OfferList text="Konsep Acara Eksklusif" status="active" />
+            <OfferList text="Dedicated Wedding Consultant" status="active" />
+            <OfferList text="Unlimited Coordination" status="active" />
+            <OfferList text="VIP Family Assistance" status="active" />
+            <OfferList text="Full Event Management" status="active" />
           </PricingBox>
         </div>
       </div>
@@ -137,8 +108,8 @@ const Pricing = () => {
               y2="1131.65"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#C48E3B" />
+              <stop offset="1" stopColor="#C48E3B" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_93:235"
@@ -148,8 +119,8 @@ const Pricing = () => {
               y2="915.952"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+              <stop stopColor="#C48E3B" />
+              <stop offset="1" stopColor="#C48E3B" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>

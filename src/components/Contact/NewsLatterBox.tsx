@@ -6,11 +6,11 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
-      <h3 className="mb-4 text-2xl leading-tight font-bold text-black dark:text-white">
+    <div className="relative z-10 rounded-xl bg-white p-8 shadow-lg sm:p-11 lg:p-8 xl:p-11">
+      <h3 className="mb-4 text-2xl leading-tight font-bold text-[#2E2A25]">
         Subscribe to receive future updates
       </h3>
-      <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:border-white/25">
+      <p className="mb-11 border-b border-[#E2BC81]/[.25] pb-11 text-base leading-relaxed text-[#6B6258]">
         Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
         massa quis lectus.
       </p>
@@ -19,20 +19,20 @@ const NewsLatterBox = () => {
           type="text"
           name="name"
           placeholder="Enter your name"
-          className="border-stroke text-body-color focus:border-primary dark:text-body-color-dark dark:shadow-two dark:focus:border-primary mb-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+          className="mb-4 w-full rounded-lg border border-[#E2BC81] bg-[#F8F3EB] px-6 py-3 text-base text-[#6B6258] outline-hidden focus:border-[#C48E3B]"
         />
         <input
           type="email"
           name="email"
           placeholder="Enter your email"
-          className="border-stroke text-body-color focus:border-primary dark:text-body-color-dark dark:shadow-two dark:focus:border-primary mb-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
+          className="mb-4 w-full rounded-lg border border-[#E2BC81] bg-[#F8F3EB] px-6 py-3 text-base text-[#6B6258] outline-hidden focus:border-[#C48E3B]"
         />
         <input
           type="submit"
           value="Subscribe"
-          className="bg-primary shadow-submit hover:bg-primary/90 dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-xs px-9 py-4 text-base font-medium text-white duration-300"
+          className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-lg bg-[#C48E3B] px-9 py-4 text-base font-medium text-white shadow-lg duration-300 hover:bg-[#A8742D]"
         />
-        <p className="text-body-color dark:text-body-color-dark text-center text-base leading-relaxed">
+        <p className="text-center text-base leading-relaxed text-[#6B6258]">
           No spam guaranteed, So please don’t send any spam mail.
         </p>
       </div>

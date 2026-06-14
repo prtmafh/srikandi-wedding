@@ -1,20 +1,43 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
+import About from "@/components/Sections/About";
+import Services from "@/components/Sections/Services";
+import Gallery from "@/components/Sections/Gallery";
+import Packages from "@/components/Sections/Packages";
+import TestimonialsSection from "@/components/Sections/Testimonials";
+import ContactSection from "@/components/Sections/Contact";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 
+// import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+  title: "Srikandi Wedding Organizer | Mewujudkan Pernikahan Impian Anda",
+  description:
+    "Srikandi Wedding Organizer membantu mewujudkan pernikahan yang elegan, berkesan, dan terorganisir dengan baik. Melayani wedding planning, koordinasi acara, dekorasi, dan kebutuhan pernikahan lainnya.",
+  keywords: [
+    "Wedding Organizer",
+    "Wedding Planner",
+    "Srikandi Wedding",
+    "Jasa Pernikahan",
+    "Wedding Organizer Indonesia",
+    "Dekorasi Pernikahan",
+    "Event Organizer Pernikahan",
+  ],
+  authors: [{ name: "Srikandi Wedding Organizer" }],
+  creator: "Srikandi Wedding Organizer",
+  applicationName: "Srikandi Wedding Organizer",
+  // metadataBase: new URL("https://srikandiwedding.com"), // ganti dengan domain asli
+  openGraph: {
+    title: "Srikandi Wedding Organizer",
+    description:
+      "Mewujudkan pernikahan impian dengan pelayanan profesional dan penuh perhatian.",
+    type: "website",
+    locale: "id_ID",
+    siteName: "Srikandi Wedding Organizer",
+  },
 };
 
 export default function Home() {
@@ -22,15 +45,15 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <Features />
-      <Video />
+      <About />
+      <Services />
+      <Packages />
+      <Gallery />
+      <TestimonialsSection />
+      <ContactSection />
+      {/* <Video />
       <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+      <Blog /> */}
     </>
   );
 }

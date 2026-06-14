@@ -1,44 +1,88 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-[#FCFBF9] pt-[90px] pb-16 md:pt-[110px] md:pb-[90px] xl:pt-[120px] xl:pb-[120px]"
       >
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Free and Open-Source Next.js Template for Startup & SaaS
-                </h1>
-                <p className="mb-12 text-base leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 16.x and Tailwind CSS.
-                </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                  >
-                    🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Star on GitHub
-                  </Link>
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* LEFT CONTENT */}
+            <div>
+              <div className="mb-5 inline-flex items-center rounded-full border border-[#E2BC81] bg-[#F8F3EB] px-4 py-2 text-sm font-medium text-[#C48E3B]">
+                ✨ Wedding Organizer Profesional
+              </div>
+
+              <h1 className="mb-6 max-w-[700px] text-5xl leading-[1.1] font-bold text-[#2E2A25] md:text-6xl">
+                Mewujudkan Pernikahan
+                <span className="block text-[#C48E3B]">Impian Anda</span>
+              </h1>
+
+              <p className="mb-10 max-w-[600px] text-lg leading-relaxed text-[#6B6258]">
+                Srikandi Wedding hadir untuk membantu mewujudkan hari bahagia
+                Anda dengan pelayanan profesional, elegan, dan penuh perhatian
+                pada setiap detail acara.
+              </p>
+
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="https://wa.me/6281234567890"
+                  className="rounded-xl bg-[#C48E3B] px-8 py-4 text-center font-semibold text-white shadow-lg transition hover:bg-[#A8742D]"
+                >
+                  Konsultasi Gratis
+                </Link>
+
+                <Link
+                  href="/gallery"
+                  className="rounded-xl border border-[#C48E3B] px-8 py-4 text-center font-semibold text-[#C48E3B] transition hover:bg-[#C48E3B] hover:text-white"
+                >
+                  Lihat Portfolio
+                </Link>
+              </div>
+
+              {/* STATISTIC */}
+              <div className="mt-14 flex flex-wrap gap-10">
+                <div>
+                  <h3 className="text-3xl font-bold text-[#C48E3B]">250+</h3>
+                  <p className="text-sm text-[#6B6258]">Wedding Events</p>
                 </div>
+
+                <div>
+                  <h3 className="text-3xl font-bold text-[#C48E3B]">5+</h3>
+                  <p className="text-sm text-[#6B6258]">Tahun Pengalaman</p>
+                </div>
+
+                <div>
+                  <h3 className="text-3xl font-bold text-[#C48E3B]">98%</h3>
+                  <p className="text-sm text-[#6B6258]">Klien Puas</p>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative mx-auto max-w-[500px]">
+              <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-r from-[#E2BC81]/20 to-[#C48E3B]/20 blur-3xl" />
+
+              <Image
+                src="/images/hero/hero-wedding.jpg"
+                alt="Srikandi Wedding"
+                width={700}
+                height={900}
+                priority
+                className="relative h-auto w-full rounded-[32px] object-cover shadow-2xl"
+              />
+
+              <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white px-6 py-4 shadow-xl">
+                <p className="text-3xl font-bold text-[#C48E3B]">250+</p>
+                <p className="text-sm text-[#634014]">Acara Pernikahan</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        <div className="absolute top-0 right-0 z-[-1] opacity-20 lg:opacity-40">
           <svg
             width="450"
             height="556"
@@ -104,8 +148,8 @@ const Hero = () => {
                 y2="288"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#E2BC81" />
+                <stop offset="1" stopColor="#E2BC81" stopOpacity="0" />
               </linearGradient>
               <radialGradient
                 id="paint1_radial_25:217"
@@ -116,7 +160,7 @@ const Hero = () => {
                 gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
               >
                 <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
+                <stop offset="1" stopColor="#C48E3B" stopOpacity="0.12" />
               </radialGradient>
               <radialGradient
                 id="paint2_radial_25:217"
@@ -127,7 +171,7 @@ const Hero = () => {
                 gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
               >
                 <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
+                <stop offset="1" stopColor="#C48E3B" stopOpacity="0.12" />
               </radialGradient>
               <linearGradient
                 id="paint3_linear_25:217"
@@ -137,8 +181,8 @@ const Hero = () => {
                 y2="351.421"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#C48E3B" />
+                <stop offset="1" stopColor="#E2BC81" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_25:217"
@@ -148,8 +192,8 @@ const Hero = () => {
                 y2="448.882"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
+                <stop stopColor="#C48E3B" />
+                <stop offset="1" stopColor="#FCFBF9" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_25:217"
@@ -159,8 +203,8 @@ const Hero = () => {
                 y2="470"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
+                <stop stopColor="#E2BC81" />
+                <stop offset="1" stopColor="#FCFBF9" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint6_linear_25:217"
@@ -170,13 +214,13 @@ const Hero = () => {
                 y2="338.63"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#C48E3B" />
+                <stop offset="1" stopColor="#E2BC81" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
+        <div className="absolute top-0 right-0 z-[-1] opacity-20 lg:opacity-40">
           <svg
             width="364"
             height="201"
@@ -219,7 +263,7 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#C48E3B" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_25:218"
@@ -230,7 +274,7 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#C48E3B" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_25:218"
@@ -241,7 +285,7 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#C48E3B" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_25:218"
@@ -252,7 +296,7 @@ const Hero = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
+                <stop offset="1" stopColor="#C48E3B" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_25:218"
@@ -262,8 +306,8 @@ const Hero = () => {
                 y2="99.5816"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#C48E3B" />
+                <stop offset="1" stopColor="#E2BC81" stopOpacity="0" />
               </linearGradient>
               <radialGradient
                 id="paint5_radial_25:218"

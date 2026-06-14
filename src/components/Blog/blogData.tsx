@@ -3,45 +3,46 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
+    title: "Tips Memilih Tema Pernikahan yang Sesuai dengan Kepribadian Anda",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Temukan inspirasi tema pernikahan mulai dari modern, tradisional, hingga outdoor wedding yang sesuai dengan karakter Anda dan pasangan.",
     image: "/images/blog/blog-01.jpg",
     author: {
-      name: "Samuyl Joshi",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "Srikandi Wedding",
+      image: "/images/blog/author.png",
+      designation: "Wedding Planner",
     },
-    tags: ["creative"],
+    tags: ["Wedding Tips"],
     publishDate: "2025",
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
+    title: "Cara Menyusun Budget Pernikahan Tanpa Mengurangi Kualitas Acara",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Pelajari cara mengatur anggaran pernikahan secara efektif agar tetap elegan, berkesan, dan sesuai dengan kemampuan finansial Anda.",
     image: "/images/blog/blog-02.jpg",
     author: {
-      name: "Musharof Chy",
-      image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      name: "Srikandi Wedding",
+      image: "/images/blog/author.png",
+      designation: "Wedding Consultant",
     },
-    tags: ["computer"],
+    tags: ["Budget"],
     publishDate: "2025",
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
+    title: "Checklist Persiapan Pernikahan dari 12 Bulan Hingga Hari H",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Panduan lengkap persiapan pernikahan agar setiap detail acara berjalan lancar tanpa stres dan tanpa ada yang terlewat.",
     image: "/images/blog/blog-03.jpg",
     author: {
-      name: "Lethium Deo",
-      image: "/images/blog/author-03.png",
-      designation: "Graphic Designer",
+      name: "Srikandi Wedding",
+      image: "/images/blog/author.png",
+      designation: "Wedding Organizer",
     },
-    tags: ["design"],
+    tags: ["Planning"],
     publishDate: "2025",
   },
 ];
+
 export default blogData;
