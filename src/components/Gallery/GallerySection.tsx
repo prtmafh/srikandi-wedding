@@ -2,12 +2,12 @@ import Image from "next/image";
 import SectionTitle from "@/components/Common/SectionTitle";
 
 const galleryImages = [
-  "/images/gallery/gallery-1.jfif",
-  "/images/gallery/gallery-2.jfif",
-  "/images/gallery/gallery-3.jfif",
-  "/images/gallery/gallery-4.jfif",
-  "/images/gallery/gallery-5.jfif",
-  "/images/gallery/gallery-6.jfif",
+  "/images/gallery/gallery-1.jpg",
+  "/images/gallery/gallery-2.jpg",
+  "/images/gallery/gallery-3.jpg",
+  "/images/gallery/gallery-4.jpg",
+  "/images/gallery/gallery-5.jpg",
+  "/images/gallery/gallery-6.jpg",
 ];
 
 const GallerySection = () => {

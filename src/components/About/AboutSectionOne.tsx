@@ -91,7 +91,7 @@ const AboutSectionOne = () => {
 
                 <div className="relative overflow-hidden rounded-[32px] shadow-xl">
                   <Image
-                    src="/images/about/about-image.jfif"
+                    src="/images/about/about-image.jpg"
                     alt="Srikandi Wedding Team"
                     width={700}
                     height={800}
