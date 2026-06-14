@@ -116,7 +116,7 @@ const Footer = () => {
               </h3>
 
               <ul className="text-body-color space-y-4">
-                <li>📱 +62 812-3456-7890</li>
+                <li>📱 +6287834800971</li>
                 <li>✉️ hello@weddingorganizer.com</li>
                 <li>📍 Bekasi, Indonesia</li>
               </ul>

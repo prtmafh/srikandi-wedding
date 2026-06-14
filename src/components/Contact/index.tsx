@@ -24,7 +24,7 @@ const Contact = () => {
 
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
                 <a
-                  href="https://wa.me/628123456789"
+                  href="https://wa.me/6287834800971"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-xl bg-[#C48E3B] px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-[#B17C2C]"

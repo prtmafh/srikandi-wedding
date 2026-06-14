@@ -29,14 +29,14 @@ const Hero = () => {
 
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/6287834800971"
                   className="rounded-xl bg-[#C48E3B] px-8 py-4 text-center font-semibold text-white shadow-lg transition hover:bg-[#A8742D]"
                 >
                   Konsultasi Gratis
                 </Link>
 
                 <Link
-                  href="/gallery"
+                  href="#gallery"
                   className="rounded-xl border border-[#C48E3B] px-8 py-4 text-center font-semibold text-[#C48E3B] transition hover:bg-[#C48E3B] hover:text-white"
                 >
                   Lihat Portfolio
