@@ -1,5 +1,3 @@
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import About from "@/components/Sections/About";
@@ -8,7 +6,7 @@ import Gallery from "@/components/Sections/Gallery";
 import Packages from "@/components/Sections/Packages";
 import TestimonialsSection from "@/components/Sections/Testimonials";
 import ContactSection from "@/components/Sections/Contact";
-import Video from "@/components/Video";
+
 import { Metadata } from "next";
 
 // import type { Metadata } from "next";
