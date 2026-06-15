@@ -3,6 +3,8 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import Image from "next/image";
+import PricelistCarousel from "./Pricelist";
 
 const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -14,60 +16,124 @@ const Pricing = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Paket Wedding Organizer"
-          paragraph="Setiap pasangan memiliki cerita yang berbeda. Pilih paket layanan yang sesuai dengan kebutuhan acara Anda atau konsultasikan untuk paket yang sepenuhnya disesuaikan."
+          title="Paket Pernikahan"
+          paragraph="Pilih paket dekorasi dan tata acara yang sesuai dengan kebutuhan pernikahan Anda. Seluruh paket dapat dikonsultasikan dan disesuaikan dengan konsep acara."
           center
           width="665px"
         />
 
-        <div className="w-full">
-          <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
-            <span className="mr-4 text-base font-semibold text-[#C48E3B]">
-              Investasi Pernikahan
-            </span>
-          </div>
-        </div>
+        {/* <div className="mb-10 flex justify-center">
+          <span className="text-base font-semibold text-[#C48E3B]">
+            Pricelist Srikandi Wedding {new Date().getFullYear()}
+          </span>
+        </div> */}
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-24 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
+          {/* Minimalis */}
           <PricingBox
-            packageName="Akad Intimate"
-            price="5.000.000"
-            duration="-"
-            subtitle="Cocok untuk akad atau resepsi sederhana dengan pendampingan profesional."
+            packageName="Minimalis"
+            price="15 Jt"
+            duration="paket"
+            subtitle="Paket sederhana dan elegan untuk acara pernikahan yang hangat dan intim."
           >
-            <OfferList text="Konsultasi Persiapan Pernikahan" status="active" />
-            <OfferList text="Rundown Acara" status="active" />
-            <OfferList text="Koordinasi Vendor" status="active" />
-            <OfferList text="Tim WO Hari H" status="active" />
-            <OfferList text="Pendampingan Pengantin" status="active" />
-            <OfferList text="Full Planning" status="inactive" />
+            <OfferList text="Tenda Dekor 4 Lokal (64 m²)" status="active" />
+            <OfferList text="Kursi Napol Cover 100 pcs" status="active" />
+            <OfferList text="Mini Pelaminan 4 pcs" status="active" />
+            <OfferList text="Blower 1 pcs" status="active" />
+            <OfferList text="Gubukan 1 pcs" status="active" />
+            <OfferList text="Makeup Pengantin & Softlens" status="active" />
           </PricingBox>
+
+          {/* Silver */}
           <PricingBox
-            packageName="Wedding Signature"
-            price="15.000.000"
-            duration="-"
-            subtitle="Pilihan favorit pasangan dengan layanan lengkap dari persiapan hingga hari pernikahan."
+            packageName="Silver"
+            price="22 Jt"
+            duration="paket"
+            subtitle="Pilihan populer dengan dekorasi lebih lengkap dan kapasitas tamu lebih besar."
           >
-            <OfferList text="Full Wedding Planning" status="active" />
-            <OfferList text="Koordinasi Seluruh Vendor" status="active" />
-            <OfferList text="Tim WO Profesional" status="active" />
-            <OfferList text="Pendampingan Keluarga" status="active" />
-            <OfferList text="Technical Meeting" status="active" />
-            <OfferList text="Gladi Bersih Acara" status="active" />
+            <OfferList text="Tenda Dekor 6 Lokal (96 m²)" status="active" />
+            <OfferList text="Kursi Future Cover 100 pcs" status="active" />
+            <OfferList text="Pelaminan 6 Meter" status="active" />
+            <OfferList text="Mini Garden" status="active" />
+            <OfferList text="Gapura & Janur" status="active" />
+            <OfferList text="Makeup Pengantin & Softlens" status="active" />
           </PricingBox>
+
+          {/* Gold */}
           <PricingBox
-            packageName="Royal Wedding"
-            price="30.000.000"
-            duration="-"
-            subtitle="Layanan premium dengan konsep eksklusif dan pendampingan penuh."
+            packageName="Gold"
+            price="25 Jt"
+            duration="paket"
+            subtitle="Dekorasi premium dengan area pelaminan yang lebih luas dan elegan."
           >
-            <OfferList text="Wedding Planning Premium" status="active" />
-            <OfferList text="Konsep Acara Eksklusif" status="active" />
-            <OfferList text="Dedicated Wedding Consultant" status="active" />
-            <OfferList text="Unlimited Coordination" status="active" />
-            <OfferList text="VIP Family Assistance" status="active" />
-            <OfferList text="Full Event Management" status="active" />
+            <OfferList text="Tenda Dekor 8 Lokal (120 m²)" status="active" />
+            <OfferList text="Kursi Future Cover 150 pcs" status="active" />
+            <OfferList text="Pelaminan 6–8 Meter" status="active" />
+            <OfferList text="Mini Garden Premium" status="active" />
+            <OfferList text="Janur & Bambu 2 Pasang" status="active" />
+            <OfferList text="Makeup Pengantin & Softlens" status="active" />
           </PricingBox>
+
+          {/* Platinum */}
+          <PricingBox
+            packageName="Platinum"
+            price="30 Jt"
+            duration="paket"
+            subtitle="Paket terbaik dengan dekorasi mewah dan kapasitas tamu lebih banyak."
+          >
+            <OfferList text="Tenda Dekor 8 Lokal (150 m²)" status="active" />
+            <OfferList text="Kursi Future Cover 200 pcs" status="active" />
+            <OfferList text="Pelaminan 8 Meter" status="active" />
+            <OfferList text="Mini Garden Premium" status="active" />
+            <OfferList text="Janur & Bambu 2 Pasang" status="active" />
+            <OfferList text="Makeup Pengantin & Softlens" status="active" />
+          </PricingBox>
+        </div>
+        <SectionTitle
+          title="Pricelist Lengkap"
+          paragraph="Lihat detail seluruh paket, layanan wedding organizer, dekorasi, makeup, dan dokumentasi."
+          center
+        />
+        {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"> */}
+        {/* {[
+            "/images/pricelist/1.png",
+            "/images/pricelist/2.png",
+            "/images/pricelist/3.png",
+            "/images/pricelist/4.png",
+            "/images/pricelist/5.png",
+            "/images/pricelist/6.png",
+            "/images/pricelist/7.png",
+            "/images/pricelist/8.png",
+          ].map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src={image}
+                alt={`Pricelist ${index + 1}`}
+                width={600}
+                height={900}
+                className="w-full transition duration-300 hover:scale-105"
+              />
+            </div>
+          ))} */}
+        <PricelistCarousel />
+        {/* </div> */}
+        <div className="mt-16 text-center">
+          <h3 className="mb-4 text-3xl leading-tight! font-bold text-[#2E2A25] sm:text-4xl md:text-[45px]">
+            Belum Menemukan Paket yang Sesuai?
+          </h3>
+
+          <p className="mb-8 text-base leading-relaxed! text-[#6B6258] md:text-lg">
+            Kami siap membantu menyesuaikan paket sesuai kebutuhan dan budget
+            pernikahan Anda.
+          </p>
+
+          <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            className="inline-flex rounded-md bg-[#C48E3B] px-8 py-4 text-white"
+          >
+            Konsultasi Gratis via WhatsApp
+          </a>
         </div>
       </div>
 
@@ -87,7 +153,7 @@ const Pricing = () => {
             height="541.607"
             rx="2"
             transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
+            fill="url(#paint0_linear)"
           />
           <rect
             opacity="0.3"
@@ -97,11 +163,11 @@ const Pricing = () => {
             height="541.607"
             rx="2"
             transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
+            fill="url(#paint1_linear)"
           />
           <defs>
             <linearGradient
-              id="paint0_linear_93:235"
+              id="paint0_linear"
               x1="-90.1184"
               y1="420.414"
               x2="-90.1184"
@@ -112,7 +178,7 @@ const Pricing = () => {
               <stop offset="1" stopColor="#C48E3B" stopOpacity="0" />
             </linearGradient>
             <linearGradient
-              id="paint1_linear_93:235"
+              id="paint1_linear"
               x1="-159.441"
               y1="204.714"
               x2="-159.441"
