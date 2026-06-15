@@ -23,9 +23,20 @@ const PricingBox = (props: {
         </div>
         <p className="mb-7 text-base text-[#6B6258]">{subtitle}</p>
         <div className="mb-8 border-b border-[#E2BC81]/[.2] pb-8">
-          <button className="flex w-full items-center justify-center rounded-lg bg-[#C48E3B] p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-[#A8742D]">
+          <a
+            href={`https://wa.me/6287834800971?text=${encodeURIComponent(
+              `Halo Tim Srikandi Wedding Organizer.
+
+Saya sedang merencanakan acara pernikahan dan tertarik dengan paket ${packageName} yang anda tawarkan. Saya ingin berkonsultasi mengenai detail paket, fasilitas yang termasuk di dalamnya, serta estimasi biaya dan ketersediaan tanggal acara.
+
+Mohon informasinya. Terima kasih atas bantuannya.`,
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full items-center justify-center rounded-lg bg-[#C48E3B] p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-[#A8742D]"
+          >
             Konsultasi Sekarang
-          </button>
+          </a>
         </div>
         <div>{children}</div>
         <div className="absolute right-0 bottom-0 z-[-1]">

@@ -1,6 +1,7 @@
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import Reveal from "@/components/Common/Reveal";
 
 const testimonialData: Testimonial[] = [
   {
@@ -39,17 +40,23 @@ const Testimonials = () => {
       className="relative z-10 bg-white py-16 md:py-20 lg:py-28"
     >
       <div className="container">
-        <SectionTitle
-          title="Cerita Bahagia Klien Kami"
-          paragraph="Kepercayaan dan kepuasan pasangan pengantin adalah prioritas utama kami dalam setiap acara yang kami tangani."
-          center
-        />
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
-        </div>
+        <Reveal>
+          <SectionTitle
+            title="Cerita Bahagia Klien Kami"
+            paragraph="Kepercayaan dan kepuasan pasangan pengantin adalah prioritas utama kami dalam setiap acara yang kami tangani."
+            center
+          />
+        </Reveal>
+        <Reveal delay={0.2}>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+            {testimonialData.map((testimonial) => (
+              <SingleTestimonial
+                key={testimonial.id}
+                testimonial={testimonial}
+              />
+            ))}
+          </div>
+        </Reveal>
       </div>
       <div className="absolute top-5 right-0 z-[-1]">
         <svg

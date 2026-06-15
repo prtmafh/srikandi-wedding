@@ -6,6 +6,7 @@ import Gallery from "@/components/Sections/Gallery";
 import Packages from "@/components/Sections/Packages";
 import TestimonialsSection from "@/components/Sections/Testimonials";
 import ContactSection from "@/components/Sections/Contact";
+import FadeInSection from "@/components/Common/FadeInSection";
 
 import { Metadata } from "next";
 
@@ -42,6 +43,34 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
+
+      {/* <FadeInSection>
+        <Hero />
+      </FadeInSection>
+
+      <FadeInSection delay={0.1}>
+        <About />
+      </FadeInSection>
+
+      <FadeInSection delay={0.1}>
+        <Services />
+      </FadeInSection>
+
+      <FadeInSection delay={0.1}>
+        <Packages />
+      </FadeInSection>
+
+      <FadeInSection delay={0.1}>
+        <Gallery />
+      </FadeInSection>
+
+      <FadeInSection delay={0.1}>
+        <TestimonialsSection />
+      </FadeInSection>
+
+      <FadeInSection delay={0.1}>
+        <ContactSection />
+      </FadeInSection> */}
       <Hero />
       <About />
       <Services />
@@ -49,9 +78,6 @@ export default function Home() {
       <Gallery />
       <TestimonialsSection />
       <ContactSection />
-      {/* <Video />
-      <Brands />
-      <Blog /> */}
     </>
   );
 }

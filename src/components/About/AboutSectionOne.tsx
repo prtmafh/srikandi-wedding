@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import Reveal from "@/components/Common/Reveal";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -28,45 +29,47 @@ const AboutSectionOne = () => {
                   Tentang Kami
                 </span>
               </div>
+              <Reveal>
+                <SectionTitle
+                  title="Mendampingi Setiap Langkah Menuju Hari Bahagia Anda"
+                  paragraph="Srikandi Wedding hadir untuk membantu setiap pasangan mewujudkan pernikahan yang berkesan, terencana, dan sesuai impian. Dengan pengalaman lebih dari 5 tahun, kami percaya bahwa setiap kisah cinta layak dirayakan dengan sempurna melalui pelayanan yang personal dan penuh perhatian."
+                  mb="32px"
+                />
+              </Reveal>
+              <Reveal delay={0.1}>
+                <div className="mb-8 rounded-2xl border border-[#E2BC81]/20 bg-[#F8F3EB] p-6">
+                  <h3 className="mb-3 text-lg font-semibold text-black">
+                    Misi Kami
+                  </h3>
 
-              <SectionTitle
-                title="Mendampingi Setiap Langkah Menuju Hari Bahagia Anda"
-                paragraph="Srikandi Wedding hadir untuk membantu setiap pasangan mewujudkan pernikahan yang berkesan, terencana, dan sesuai impian. Dengan pengalaman lebih dari 5 tahun, kami percaya bahwa setiap kisah cinta layak dirayakan dengan sempurna melalui pelayanan yang personal dan penuh perhatian."
-                mb="32px"
-              />
-
-              <div className="mb-8 rounded-2xl border border-[#E2BC81]/20 bg-[#F8F3EB] p-6">
-                <h3 className="mb-3 text-lg font-semibold text-black">
-                  Misi Kami
-                </h3>
-
-                <p className="leading-relaxed text-[#6B6258]">
-                  Membantu setiap pasangan menikmati proses menuju hari
-                  pernikahan tanpa stres dengan perencanaan yang matang,
-                  koordinasi yang profesional, dan perhatian pada setiap detail
-                  penting.
-                </p>
-              </div>
-
-              <div
-                className="mb-12 max-w-[600px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2">
-                    <List text="Pendekatan Personal untuk Setiap Pasangan" />
-                    <List text="Perencanaan Detail & Terstruktur" />
-                    <List text="Koordinasi Vendor Profesional" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2">
-                    <List text="Pendampingan Hingga Hari Acara" />
-                    <List text="Komunikasi Cepat & Transparan" />
-                    <List text="Komitmen pada Kualitas Pelayanan" />
-                  </div>
+                  <p className="leading-relaxed text-[#6B6258]">
+                    Membantu setiap pasangan menikmati proses menuju hari
+                    pernikahan tanpa stres dengan perencanaan yang matang,
+                    koordinasi yang profesional, dan perhatian pada setiap
+                    detail penting.
+                  </p>
                 </div>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <div
+                  className="mb-12 max-w-[600px] lg:mb-0"
+                  data-wow-delay=".15s"
+                >
+                  <div className="mx-[-12px] flex flex-wrap">
+                    <div className="w-full px-3 sm:w-1/2">
+                      <List text="Pendekatan Personal untuk Setiap Pasangan" />
+                      <List text="Perencanaan Detail & Terstruktur" />
+                      <List text="Koordinasi Vendor Profesional" />
+                    </div>
 
-                {/* <div className="mt-10 grid grid-cols-3 gap-6 border-t border-[#E2BC81]/20 pt-8">
+                    <div className="w-full px-3 sm:w-1/2">
+                      <List text="Pendampingan Hingga Hari Acara" />
+                      <List text="Komunikasi Cepat & Transparan" />
+                      <List text="Komitmen pada Kualitas Pelayanan" />
+                    </div>
+                  </div>
+
+                  {/* <div className="mt-10 grid grid-cols-3 gap-6 border-t border-[#E2BC81]/20 pt-8">
                   <div>
                     <h3 className="text-3xl font-bold text-[#C48E3B]">150+</h3>
                     <p className="mt-1 text-sm text-[#6B6258]">Pernikahan</p>
@@ -82,7 +85,8 @@ const AboutSectionOne = () => {
                     <p className="mt-1 text-sm text-[#6B6258]">Partner</p>
                   </div>
                 </div> */}
-              </div>
+                </div>
+              </Reveal>
             </div>
 
             <div className="w-full px-4 lg:w-1/2">

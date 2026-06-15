@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,7 +11,15 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden bg-[#FCFBF9] pt-[90px] pb-16 md:pt-[110px] md:pb-[90px] xl:pt-[120px] xl:pb-[120px]"
       >
-        <div className="container">
+        <motion.div
+          className="container"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.4,
+          }}
+        >
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* LEFT CONTENT */}
             <div>
@@ -16,20 +27,41 @@ const Hero = () => {
                 ✨ Wedding Organizer Profesional
               </div>
 
-              <h1 className="mb-6 max-w-[700px] text-5xl leading-[1.1] font-bold text-[#2E2A25] md:text-6xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-6 max-w-[700px] text-5xl leading-[1.1] font-bold text-[#2E2A25] md:text-6xl"
+              >
                 Mewujudkan Pernikahan
                 <span className="block text-[#C48E3B]">Impian Anda</span>
-              </h1>
+              </motion.h1>
 
-              <p className="mb-10 max-w-[600px] text-lg leading-relaxed text-[#6B6258]">
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                }}
+                className="mb-10 max-w-[600px] text-lg leading-relaxed text-[#6B6258]"
+              >
                 Srikandi Wedding hadir untuk membantu mewujudkan hari bahagia
                 Anda dengan pelayanan profesional, elegan, dan penuh perhatian
                 pada setiap detail acara.
-              </p>
+              </motion.p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href="https://wa.me/6287834800971"
+                  href={`https://wa.me/6287834800971?text=${encodeURIComponent(
+                    `Halo Tim Srikandi Wedding Organizer.
+
+Saya sedang merencanakan pernikahan dan ingin berkonsultasi mengenai layanan yang tersedia. Mohon informasi terkait paket wedding, dekorasi, serta ketersediaan tanggal acara.
+
+Terima kasih.`,
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-xl bg-[#C48E3B] px-8 py-4 text-center font-semibold text-white shadow-lg transition hover:bg-[#A8742D]"
                 >
                   Konsultasi Gratis
@@ -44,7 +76,15 @@ const Hero = () => {
               </div>
 
               {/* STATISTIC */}
-              <div className="mt-14 flex flex-wrap gap-10">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.6,
+                }}
+                className="mt-14 flex flex-wrap gap-10"
+              >
                 <div>
                   <h3 className="text-3xl font-bold text-[#C48E3B]">250+</h3>
                   <p className="text-sm text-[#6B6258]">Wedding Events</p>
@@ -59,7 +99,7 @@ const Hero = () => {
                   <h3 className="text-3xl font-bold text-[#C48E3B]">98%</h3>
                   <p className="text-sm text-[#6B6258]">Klien Puas</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* RIGHT IMAGE */}
@@ -81,7 +121,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="absolute top-0 right-0 z-[-1] opacity-20 lg:opacity-40">
           <svg
             width="450"

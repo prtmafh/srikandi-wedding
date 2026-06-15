@@ -122,7 +122,7 @@ const Footer = () => {
               </ul>
 
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6287834800971"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-[#C48E3B] px-6 py-3 font-medium text-white transition hover:opacity-90"
